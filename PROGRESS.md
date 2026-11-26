@@ -1,7 +1,7 @@
 # Progres Pengerjaan SIM KKN (Laravel + MySQL 8.4)
 
-Sedang dikerjakan: Tahap 1 — Fondasi proyek Laravel, migrasi 14 tabel, model, dan seeder
-Langkah berikutnya: Menunggu pemilik proyek mengisi DB_PASSWORD di .env, menjalankan migrate & db:seed, lalu persetujuan masuk ke Tahap 2 (U1: Masuk)
+Sedang dikerjakan: Tahap 2 — U1: Masuk (Login)
+Langkah berikutnya: Membangun halaman Masuk (/masuk & /) dengan dua guard (admin & mahasiswa)
 
 ---
 
@@ -11,7 +11,7 @@ Langkah berikutnya: Menunggu pemilik proyek mengisi DB_PASSWORD di .env, menjala
 - [x] Hapus migrasi dan model bawaan Laravel (`users`, `cache`, `jobs`, `password_reset_tokens`)
 - [x] Buat migrasi 14 tabel persis sesuai Bagian 3 spesifikasi + 14 model Eloquent (`$timestamps = false`)
 - [x] Buat seeder `AdminSeeder`, `ProgramStudiSeeder`, dan `PeriodeSeeder`
-- [ ] Jalankan `php artisan migrate --seed` ke MySQL 8.4 setelah pemilik mengisi `DB_PASSWORD` di `.env`
+- [x] Jalankan `php artisan migrate --seed` ke MySQL 8.4 setelah pemilik mengisi `DB_PASSWORD` di `.env` (15 tabel + Admin, 17 prodi, 1 periode, 2 ketentuan masuk)
 
 > Catatan Tahap 1:
 > - `DB_PASSWORD=` di `.env` sengaja dikosongkan agar diisi langsung oleh pemilik proyek.
