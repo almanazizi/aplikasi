@@ -1,0 +1,407 @@
+.mobile-menu-trigger,
+.mobile-brand-label,
+.mobile-demo-bar,
+.mobile-panel,
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+  }
+
+  body:has(.bottom-nav) {
+    padding-bottom: calc(124px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .topbar,
+  .app-topbar {
+    height: 64px;
+    min-height: 64px;
+    padding: 0;
+  }
+
+  .topbar .container-page {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding-inline: 14px;
+  }
+
+  .topbar .top-nav,
+  .app-topbar .account-name,
+  .app-layout > .sidebar,
+  .desktop-brand-label,
+  .topbar .brand-name small,
+  .demo-bar {
+    display: none;
+  }
+
+  .topbar .brand {
+    min-width: 0;
+    min-height: 44px;
+    gap: 8px;
+  }
+
+  .topbar .brand img {
+    width: 30px;
+    height: 36px;
+  }
+
+  .topbar .brand-name .mobile-brand-label {
+    display: block;
+    font-size: 18px;
+  }
+
+  .app-layout {
+    display: block;
+    min-height: calc(100vh - 125px - env(safe-area-inset-bottom, 0px));
+    min-height: calc(100svh - 125px - env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-panel-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .mobile-panel-button .icon {
+    width: 20px;
+    height: 20px;
+    flex: none;
+  }
+
+  .mobile-panel-button:focus-visible,
+  .mobile-panel :is(a, button, select):focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+  }
+
+  .mobile-panel[open] {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    background: white;
+  }
+
+  .mobile-panel::backdrop {
+    background: #0f172a80;
+    backdrop-filter: none;
+  }
+
+  html:has(.mobile-panel[open]) {
+    overflow: hidden;
+  }
+
+  #mobile-nav {
+    inset: 0 auto 0 0;
+    width: min(340px, calc(100% - 36px));
+    height: 100%;
+    max-height: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-radius: 0;
+  }
+
+  .mobile-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .mobile-panel-heading h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .mobile-panel-body {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 12px 16px calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+
+  #mobile-nav .side-link {
+    display: flex;
+    gap: 11px;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  #mobile-nav .side-link .icon {
+    width: 18px;
+    height: 18px;
+    flex: none;
+  }
+
+  #mobile-nav .locked-feature small {
+    display: block;
+    font-size: 11px;
+  }
+
+  .mobile-drawer-account {
+    display: grid;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+  }
+
+  .mobile-account-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-wrap: anywhere;
+  }
+
+  .mobile-drawer-account .btn {
+    justify-content: flex-start;
+    min-height: 44px;
+  }
+
+  .app-topbar .account-menu {
+    margin-left: auto;
+    flex: none;
+  }
+
+  .app-topbar .account-menu summary {
+    padding: 4px;
+  }
+
+  .app-topbar .account-options {
+    left: auto;
+    right: 0;
+    max-width: calc(100vw - 28px);
+  }
+
+  /* Navigasi bawah (v53) */
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 30;
+    padding: 4px 2px calc(4px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--line);
+    background: white;
+  }
+
+  .bottom-tab {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 4px 2px;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    color: #61748F;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .bottom-tab .icon {
+    width: 22px;
+    height: 22px;
+    flex: none;
+  }
+
+  .bottom-tab span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .bottom-tab.active {
+    color: var(--blue);
+  }
+
+  .bottom-tab.locked {
+    color: #A5B1C2;
+  }
+
+  .bottom-tab:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: -2px;
+  }
+
+  .tab-dot {
+    position: absolute;
+    top: 5px;
+    left: calc(50% + 7px);
+    width: 8px;
+    height: 8px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: var(--blue);
+  }
+
+  #mobile-more {
+    inset: auto 0 0;
+    width: 100%;
+    max-height: 85vh;
+    max-height: 85dvh;
+    border-radius: 16px 16px 0 0;
+  }
+
+  #mobile-more .side-link {
+    display: flex;
+    gap: 11px;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  #mobile-more .side-link .icon {
+    width: 18px;
+    height: 18px;
+    flex: none;
+  }
+
+  /* Tombol demo (hanya prototipe): melayang di kanan bawah, di atas navigasi bawah */
+  .mobile-demo-bar {
+    display: flex;
+    position: fixed;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    z-index: 29;
+  }
+
+  body:has(.bottom-nav) .mobile-demo-bar {
+    bottom: calc(70px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-demo-trigger {
+    min-height: 36px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    color: var(--blue);
+    box-shadow: 0 4px 14px #0f172a1f;
+  }
+
+  #mobile-demo {
+    inset: auto 0 0;
+    width: 100%;
+    max-height: 90vh;
+    max-height: 90dvh;
+    border-radius: 16px 16px 0 0;
+  }
+
+  #mobile-demo .demo-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  #mobile-demo .demo-buttons label {
+    display: block;
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #mobile-demo .demo-buttons select {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    min-height: 44px;
+    margin-bottom: 4px;
+    padding: 8px;
+    border-color: #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 16px;
+  }
+
+  #mobile-demo .demo-buttons button {
+    min-height: 44px;
+    padding: 6px 4px;
+    border-color: var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #mobile-demo .demo-buttons button.active {
+    border-color: var(--blue);
+    background: var(--blue);
+    color: white;
+  }
+
+  #mobile-demo .demo-buttons .reset span {
+    display: inline;
+  }
+
+  #toast {
+    bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+
+  body:has(.bottom-nav) #toast {
+    bottom: calc(118px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Kotak tahapan Dashboard di HP kecil (v53): hanya label tahap saat ini yang ditulis;
+   tahap lain cukup angka/centang. Label tetap terbaca pembaca layar. */
+@media (max-width: 380px) {
+  .phase-steps li:not([aria-current]) .phase-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .phase-steps li:not([aria-current]) {
+    gap: 0;
+  }
+}
+
+/* HP sangat kecil: label tab tetap utuh (6 tab Admin ≈ 53px per tab) */
+@media (max-width: 350px) {
+  .bottom-tab {
+    padding-inline: 0;
+    font-size: 10px;
+    letter-spacing: -0.1px;
+  }
+}
