@@ -1,7 +1,7 @@
 # Progres Pengerjaan SIM KKN (Laravel + MySQL 8.4)
 
-Sedang dikerjakan: Tahap 2 — U1: Masuk (Login)
-Langkah berikutnya: Membangun halaman Masuk (/masuk & /) dengan dua guard (admin & mahasiswa)
+Sedang dikerjakan: Tahap 2 selesai (menunggu pemeriksaan pemilik proyek)
+Langkah berikutnya: Tahap 3 — Data master Admin (prodi, desa, DPL, templat & impor Excel)
 
 ---
 
@@ -20,12 +20,20 @@ Langkah berikutnya: Membangun halaman Masuk (/masuk & /) dengan dua guard (admin
 ---
 
 ## Tahap 2 — Login Dua Peran, Aktivasi Akun, Lupa Kata Sandi
-- [ ] U1: Masuk (Login)
-- [ ] U2: Aktifkan akun
-- [ ] U3: Pulihkan akun
-- [ ] U4: Masukkan NIM dan kode
-- [ ] U5: Buat kata sandi
-- [ ] U77: Keluar (Logout)
+- [x] U1: Masuk (Login) — `/` dan `/masuk`, tab Mahasiswa (NIM) / Admin (email), arahan ke Profil/Kelompok/Dashboard
+- [x] U2: Aktifkan akun — `/aktivasi`, simpan kata sandi + jenis kelamin, langsung masuk ke Profil saya
+- [x] U3: Pulihkan akun — `/pemulihan`, kata sandi baru, kembali ke halaman masuk
+- [x] U4: Masukkan NIM dan kode — `KodeTiketService` (hash, 7 hari / 30 menit, sekali pakai, `lockForUpdate`)
+- [x] U5: Buat kata sandi — 8–128 karakter, ulangan harus sama
+- [x] U77: Keluar (Logout) — menu akun → Keluar akun
+- [x] Kerangka halaman: bilah atas + menu akun, sidebar, navigasi bawah HP (`<x-nav-bawah />`), penguncian fitur mahasiswa
+- [x] Tes: `tests/Feature/Auth/U1MasukTest.php`, `U2U5AktivasiPemulihanTest.php` (21 tes lulus)
+
+> Catatan Tahap 2:
+> - Halaman Dashboard, Profil saya, dan Kelompok saya baru berisi judul; isinya dibangun di Tahap 5, 6, dan 9.
+> - Ditambahkan batas 5 percobaan gagal per menit untuk masuk, aktivasi, dan pemulihan (tidak ada di prototipe).
+> - Pesan galat Admin memakai "Email atau kata sandi tidak sesuai." (prototipe: "…demo tidak sesuai.").
+> - `style.css`: alamat gambar halaman masuk diperbaiki menjadi `../img/desa-kkn.webp`.
 
 ---
 

@@ -1226,7 +1226,7 @@
 
 /* v41: halaman masuk — ilustrasi desa + kartu form */
 .auth-split{max-width:1232px;margin:0 auto;padding:44px 32px 56px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(340px,1fr);gap:56px;align-items:center}
-.auth-visual{position:relative;min-height:520px;border-radius:18px;overflow:hidden;padding:36px 38px;display:flex;flex-direction:column;align-items:flex-start;background:linear-gradient(100deg,rgba(246,250,255,.72),rgba(246,250,255,.25) 46%,rgba(246,250,255,0) 62%),url('./desa-kkn.webp') 72% 62%/cover no-repeat #DDEAF5;border:1px solid #E2E8F0}
+.auth-visual{position:relative;min-height:520px;border-radius:18px;overflow:hidden;padding:36px 38px;display:flex;flex-direction:column;align-items:flex-start;background:linear-gradient(100deg,rgba(246,250,255,.72),rgba(246,250,255,.25) 46%,rgba(246,250,255,0) 62%),url('../img/desa-kkn.webp') 72% 62%/cover no-repeat #DDEAF5;border:1px solid #E2E8F0}
 .auth-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.92);border:1px solid #E2E8F0;font-size:12px;font-weight:600;color:var(--ink)}
 .auth-pill .icon,.auth-place .icon{width:15px;height:15px}
 .auth-display{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(46px,6.4vw,86px);line-height:.98;letter-spacing:-.03em;color:#0E1A2E;margin:34px 0 0}
@@ -1246,7 +1246,7 @@
 @media (max-width:900px){.auth-split{gap:28px;grid-template-columns:minmax(0,1fr) minmax(320px,1fr)}.auth-visual{min-height:460px;padding:28px}}
 @media (max-width:760px){
   .auth-split{grid-template-columns:minmax(0,1fr);gap:20px;padding:20px 16px 36px}
-  .auth-visual{min-height:300px;padding:20px;border-radius:14px;background:linear-gradient(180deg,rgba(246,250,255,.8),rgba(246,250,255,.5) 42%,rgba(246,250,255,0) 64%),url('./desa-kkn.webp') 78% 100%/cover no-repeat #DDEAF5}
+  .auth-visual{min-height:300px;padding:20px;border-radius:14px;background:linear-gradient(180deg,rgba(246,250,255,.8),rgba(246,250,255,.5) 42%,rgba(246,250,255,0) 64%),url('../img/desa-kkn.webp') 78% 100%/cover no-repeat #DDEAF5}
   .auth-display{font-size:44px;margin-top:22px}
   .auth-split.compact .auth-visual{display:none}
   .auth-split .auth-card{padding:26px 22px}
